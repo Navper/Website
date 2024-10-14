@@ -4,8 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Cristian Navarro Pertegal</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=1.1">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        .typing-effect {
+            display: inline;
+            border-right: 2px solid #00ff00;
+            white-space: pre-wrap;
+            overflow: hidden;
+            word-wrap: break-word;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -22,40 +32,75 @@
     <section class="about">
         <h2>About Me</h2>
         <div class="about-content">
+            <div class="terminal">
+                <p id="about-text" class="typing-effect"></p>
+            </div>
+
             <div class="about-section">
-                <h3>Work Experience</h3>
+                <h3><span class="timeline-icon"><i class='bx bxs-briefcase'></i></span> Work Experience</h3>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <h4>Odoo Developer</h4>
-                        <p><strong>Company:</strong>  Abogados Asociados Damián Montoya</p>
+                        <h4><span class="timeline-icon"><i class='bx bxs-briefcase'></i></span> Odoo Developer</h4>
+                        <p><strong>Company:</strong> Abogados Asociados Damián Montoya</p>
                         <p><strong>Duration:</strong> 2024</p>
                         <p>As part of a team, I was responsible for designing and developing a management app, including database creation, Odoo module development, and client meetings.</p>
                     </div>
                     <div class="timeline-item">
-                        <h4>Computer and Mobile Device Repair Technician</h4>
+                        <h4><span class="timeline-icon"><i class='bx bxs-wrench'></i></span> Computer and Mobile Device Repair Technician</h4>
                         <p><strong>Company:</strong> Mediamarkt</p>
                         <p><strong>Duration:</strong> 2024</p>
-                        <p>Diagnose and repair a variety of electronic devices, perform routine maintenance tasks to ensure the optimal functionality of devices </p>
+                        <p>Diagnosed and repaired a variety of electronic devices, performing routine maintenance tasks to ensure the optimal functionality of devices.</p>
                     </div>
                 </div>
             </div>
 
             <div class="about-section">
-                <h3>Education</h3>
+                <h3><span class="timeline-icon"><i class='bx bxs-graduation'></i></span> Education</h3>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <h4>Higher Degree in Multiplatform Software Development</h4>
+                        <h4><span class="timeline-icon"><i class='bx bxs-graduation'></i></span> Higher Degree in Multiplatform Software Development</h4>
                         <p><strong>Institution:</strong> IES Las Espeñetas</p>
                         <p><strong>Year:</strong> 2022 - 2024</p>
                     </div>
                     <div class="timeline-item">
-                        <h4>Higher Technician Design in Advertising Graphics</h4>
-                        <p><strong>Institution:</strong>  Escuela de Arte y Superior de Diseño de Orihuela</p>
+                        <h4><span class="timeline-icon"><i class='bx bxs-palette'></i></span> Higher Technician Design in Advertising Graphics</h4>
+                        <p><strong>Institution:</strong> Escuela de Arte y Superior de Diseño de Orihuela</p>
                         <p><strong>Year:</strong> 2020 - 2022</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Cristian Navarro Pertegal. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="#"><i class='bx bxl-github'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                const text = "\n Hi, I'm Cristian Navarro Pertegal, a software developer from Orihuela, Spain. I hold a degree in Multiplatform Software Development and have experience in developing management apps and business solutions.\n\nI’ve always been passionate about technology and graphic design. Over time, I dove deeper into IT, starting with basic scripts and watching tutorials on YouTube, until I realized that what I truly wanted was to study programming. I shifted my focus from graphic design to application development, recently graduating in this field. Today, my love for programming and my eagerness to learn new technologies are stronger than ever. I’m driven to keep growing professionally and to contribute to building applications that not only solve problems but also provide unique user experiences.\n\nMy goal is to continue honing my skills and collaborating on innovative projects where I can apply everything I’ve learned and keep improving every day.";
+                const typingSpeed = 50;
+                let i = 0;
+
+                function typeWriter() {
+                    if (i < text.length) {
+                        document.getElementById('about-text').innerHTML += text.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, typingSpeed);
+                    }
+                }
+
+                typeWriter();
+            }, 500);
+        };
+    </script>
 </body>
 </html>

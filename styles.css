@@ -111,7 +111,7 @@ body {
     overflow: hidden;
     transition: color 0.4s ease;
     border: 2px solid transparent;
-    margin-bottom: 30px; /* Espacio antes de los íconos */
+    margin-bottom: 30px; 
 }
 
 .btn::before {
@@ -147,15 +147,13 @@ body {
     width: 100%;
     height: 100vh;
     display: flex;
-    flex-direction: column; /* Añadido para apilar elementos */
-    justify-content: center; /* Centra los elementos verticalmente */
-    align-items: center; /* Centra los elementos horizontalmente */
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
     padding: 0 10%;
     text-align: center;
 }
 
-
-/* Estilos para los íconos con efecto de hover y transición */
 .home-sci a {
     display: flex;
    position: relative;
@@ -227,48 +225,48 @@ body {
 /* SKILLS */
 .skills {
     margin-top:7%;
-    background: rgba(255, 255, 255, 0.1); /* Fondo gris con opacidad */
-    padding: 50px 10%; /* Espaciado vertical y horizontal */
-    text-align: center; /* Centra el texto */
+    background: rgba(255, 255, 255, 0.1); 
+    padding: 50px 10%;
+    text-align: center; 
     animation: slideTop 1s ease forwards;
 }
 
 .skills h2 {
     font-size: 36px;
     margin-bottom: 40px;
-    color: #fff; /* Color del encabezado */
+    color: #fff; 
 }
 
 .skills-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centra los elementos */
+    justify-content: center; 
 }
 
 .skill {
-    background: rgba(255, 255, 255, 0.2); /* Fondo de los recuadros con opacidad */
-    border-radius: 10px; /* Bordes redondeados */
-    margin: 15px; /* Espacio entre los recuadros */
-    padding: 20px; /* Espacio interno del recuadro */
-    width: 150px; /* Ancho fijo para los recuadros */
-    transition: transform 0.3s; /* Transición suave al hacer hover */
+    background: rgba(255, 255, 255, 0.2); 
+    border-radius: 10px; 
+    margin: 15px; 
+    padding: 20px; 
+    width: 150px;
+    transition: transform 0.3s; 
 }
 
 .skill:hover {
-    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+    transform: translateY(-5px); 
 }
 
 .skill-logo {
-    font-size: 60px; /* Ajusta el tamaño del logo */
-    margin-bottom: 10px; /* Espacio entre el logo y el nombre */
-    color: #f06; /* Cambia el color de los íconos */
+    font-size: 60px; 
+    margin-bottom: 10px; 
+    color: #f06; 
 }
 
 /* CONTACT*/
 
 .contact {
     margin-top: 7%;
-    background: rgba(255, 255, 255, 0.1); /* Fondo gris con opacidad */
+    background: rgba(255, 255, 255, 0.1);
     padding: 50px 10%;
     text-align: center;
     animation: slideTop 1s ease forwards;
@@ -335,7 +333,7 @@ body {
     overflow: hidden;
     transition: color 0.4s ease;
     border: 2px solid transparent;
-    margin-bottom: 30px; /* Espacio antes de los íconos */
+    margin-bottom: 30px;
 }
 
 .btn1::before {
@@ -367,10 +365,11 @@ body {
     box-shadow: 0 0 15px rgb(50, 205, 205);
 }
 
+
 /* ABOUT */
 .about {
     margin-top: 7%;
-    background: rgba(255, 255, 255, 0.1); /* Fondo gris con opacidad */
+    background: rgba(255, 255, 255, 0.1); 
     padding: 50px 10%;
     text-align: center;
     animation: slideTop 1s ease forwards;
@@ -396,11 +395,50 @@ body {
     width: 100%;
     max-width: 800px;
     text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
-.about-section h3 {
-    font-size: 28px;
-    margin-bottom: 20px;
+.about-section:hover {
+    transform: translateY(-5px);
+}
+
+.about-section-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.about-section-icon i {
+    font-size: 24px;
+    color: #f06;
+}
+
+.about-section-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: bold;
     color: #fff;
 }
 
@@ -413,7 +451,7 @@ body {
 .timeline-item {
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.1);
-    border-left: 5px solid #f06; /* Línea vertical de color */
+    border-left: 5px solid #f06; 
     border-radius: 5px;
 }
 
@@ -421,6 +459,9 @@ body {
     font-size: 22px;
     color: #fff;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .timeline-item p {
@@ -429,7 +470,42 @@ body {
     line-height: 1.6;
 }
 
-/* Portfolio Coming Soon Section */
+
+.terminal {
+    background-color: #1e1e1e;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.terminal:before {
+    content: 'cristian@portfolio:~$';
+    color: #00ff00;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.terminal p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+.typing-effect {
+    display: inline;
+    border-right: 2px solid #00ff00;
+    white-space: pre-wrap;
+    overflow: hidden;
+    word-break: break-word;
+}
+
+
 .coming-soon {
     width: 100%;
     height: 100vh;
@@ -437,7 +513,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgba(255, 255, 255, 0.1); /* Fondo gris con opacidad */
+    background: rgba(255, 255, 255, 0.1); 
     text-align: center;
     color: #fff;
     animation: fadeIn 1.5s ease forwards;
@@ -470,7 +546,42 @@ body {
     animation: spin 1s linear infinite;
 }
 
-/* Keyframes for slide down animation */
+.github-message {
+    margin-top: 30px;
+    font-size: 20px;
+    color: #fff;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.github-message a {
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.github-message a:hover {
+    transform: scale(1.2);
+}
+
+.github-icon {
+    font-size: 32px;
+    animation: bounce 1.5s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
 @keyframes slideDown {
     0% {
         opacity: 0;
@@ -482,7 +593,6 @@ body {
     }
 }
 
-/* Keyframes for fading in */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -492,7 +602,6 @@ body {
     }
 }
 
-/* Keyframes for spinning loader */
 @keyframes spin {
     0% {
         transform: rotate(0deg);
@@ -501,7 +610,6 @@ body {
         transform: rotate(360deg);
     }
 }
-
 
 
 @keyframes slideTop {
