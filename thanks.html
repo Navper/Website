@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracias</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Import the provided CSS -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #0c1022;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .thanks-container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1); /* Mantén el fondo semi-transparente */
+            padding: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Ajusta la sombra para mayor contraste */
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .thanks-container i {
+            font-size: 50px;
+            color: #f06; /* Usa el mismo degradado o color que en tu proyecto */
+            animation: bounce 2s infinite;
+        }
+
+        h1 {
+            margin: 20px 0;
+            font-size: 36px;
+            color: #fff; /* Blanco para mayor legibilidad sobre el fondo oscuro */
+        }
+
+        p {
+            font-size: 18px;
+            color: #ddd; /* Texto gris claro para una lectura cómoda */
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="thanks-container">
+        <i class="fas fa-check-circle"></i>
+        <h1>¡Gracias!</h1>
+        <p>Tu mensaje ha sido enviado con éxito. Gracias por ponerte interesarte en mi.</p>
+        <p>Atentamente Cristian.</p>
+        <a href="/index.html" class="btn">Volver</a>        
+    </div>
+
+</body>
+</html>
