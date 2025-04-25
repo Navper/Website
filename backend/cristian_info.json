@@ -1,0 +1,98 @@
+{
+    "nombre": "Cristian Navarro Pertegal",
+    "estatura": "1.70 metros",
+    "ciudad": "Orihuela, España",
+    "educacion": [
+      "Grado Superior en Desarrollo de Aplicaciones Multiplataforma, IES Las Espeñetas",
+      "Técnico Superior en Diseño en Gráfica Publicitaria, EASDO",
+      "Cursando un Master en Inteligencia Artificial, EIP International Business School"
+    ],
+    "experiencia": [
+      "Desarrollador Odoo en Abogados Asociados Damián Montoya (2024)",
+      "Técnico de reparación en Mediamarkt (2024)"
+    ],
+    "proyectos": [
+      "Pokedex en Java con sistema de combate básico",
+      "App de gestión de salidas de camiones en talleres"
+    ],
+    "habilidades": [
+      "Python", "Odoo", "PostgreSQL", "HTML", "CSS", "JavaScript", "Java", "TensorFlow", "Scikit-learn"
+    ],
+    "idiomas": [
+      "Español (nativo)",
+      "Inglés (B2)"
+    ],
+    "certificaciones": [
+      "Certificación AWS Cloud Practitioner (en curso)",
+      "AI Practitioner Foundational AWS (en curso)",
+      "Machine Learning Engineer Associate AWS (en curso)",
+      "Azure AI fundamentals Microsoft (en curso)",
+      "Azure AI Engineer Associate (en curso)"
+    ],
+    "soft_skills": [
+      "Trabajo en equipo",
+      "Resolución de problemas",
+      "Aprendizaje autónomo",
+      "Extrovertido y Amigable",
+      "Me encanta que me propongan retos"
+    ],
+    "logros": [
+      "Ganador de hackathon interno en el instituto",
+      "Desarrollo independiente de varios proyectos personales de software"
+    ],
+    "intereses": [
+      "Inteligencia artificial aplicada a videojuegos",
+      "Desarrollo de software open-source"
+    ],
+    "gustos": {
+      "comida": "Pizza y Arroz con Costra",
+      "música": "Rock alternativo, death metal, metal, metalcore, drum and bass, pop, techno",
+      "deportes": "Fútbol, volleyball y gimnasio"
+    },
+    "juegos_favoritos": [
+      "Pokemon Blanco y Negro",
+      "Baldur's Gate 3",
+      "Osu!",
+      "Final Fantasy VII",
+      "CS:GO"
+    ],
+    "peliculas_favoritas": [
+      "La princesa Mononoke",
+      "La sociedad de la nieve",
+      "The Shawshank Redemption"
+    ],
+    "series_favoritas": [
+      "Breaking Bad",
+      "Dark",
+      "Frieren: Beyond Journey's End"
+    ],
+    "estado_civil": "En una relacion",
+    "mascotas": "No tengo mascotas, pero me encantan los animales",
+    "animal_favorito": "Lobos y gatos",
+    "hobbies": [
+      "Escuchar música mientras programo",
+      "Explorar nuevas tecnologías",
+      "Hacer maratones de series o pelis"
+    ],
+    "caracteristicas_personales": [
+      "Creativo",
+      "Curioso",
+      "Persistente",
+      "Muy sociable",
+      "Divertido"
+    ],
+    "viajes_sonados": [
+      "China",
+      "Islandia",
+      "Italia"
+    ],
+    "gustos_extra": "Me encanta viajar, amante de los videojuegos y hacer cualquier actividad con amigos",
+    "frase_favorita": "El éxito es la suma de pequeños esfuerzos repetidos cada día.",
+    "links": {
+      "portfolio": "https://tupaginaweb.com",
+      "linkedin": "https://linkedin.com/in/tuusuario",
+      "github": "https://github.com/tuusuario"
+    }
+  }
+  
+  

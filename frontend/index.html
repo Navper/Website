@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristian Navarro Pertegal - Desarrollador</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+
+</head>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const input = document.getElementById("chat-input");
+        const chat = document.getElementById("chat-messages");
+    
+        // Texto del mensaje de bienvenida
+        const welcomeMessage = "Gracias por entrar a mi web, aquí puedes preguntarme lo que quieras 😊";
+        let i = 0;
+    
+        // Efecto de máquina de escribir
+        function typeWelcome() {
+            if (i < welcomeMessage.length) {
+                const existing = chat.innerHTML.replace(/<[^>]*>/g, ""); // Elimina etiquetas si las hay
+                chat.innerHTML = `<p><strong>Cris:</strong> ${welcomeMessage.substring(0, i + 1)}</p>`;
+                i++;
+                setTimeout(typeWelcome, 30);
+            }
+        }
+    
+        // Inicia el tipeo
+        chat.innerHTML = `<p><strong>Cris:</strong> </p>`;
+        typeWelcome();
+    
+        // Gestión del input
+        if (input) {
+            input.addEventListener("keypress", async function (e) {
+                if (e.key === "Enter") {
+                    const text = input.value;
+                    if (!text.trim()) return;
+    
+                    chat.innerHTML += `<p><strong>Tú:</strong> ${text}</p>`;
+                    input.value = "";
+    
+                    const response = await fetch("http://localhost:3000/chat", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ message: text })
+                    });
+    
+                    const data = await response.json();
+                    chat.innerHTML += `<p><strong>Bot:</strong> ${data.reply}</p>`;
+                    chat.scrollTop = chat.scrollHeight;
+                }
+            });
+        }
+    });
+    </script>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio.</a>
+        <nav class="navbar">
+            <a href="index.html" style="--i:1;" class="active">Home</a>
+            <a href="about.html" style="--i:2;">About me</a>
+            <a href="skills.html" style="--i:3;">Skills</a>
+            <a href="projects.html" style="--i:4;">Projects</a>
+            <a href="contact.html" style="--i:5;">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home">
+        <div class="profile-image">
+            <img src="assets/fotomia.png" alt="Cristian Navarro Pertegal">
+        </div>
+    
+        <div class="home-content">
+            <h1>Hello, I'm Cristian Navarro Pertegal</h1>
+            <h3>Software Developer</h3>
+            <p>
+                Recent graduate with a degree in Multiplatform Application Development and experience in software engineering and application development. 
+                I'm eager to apply my skills and knowledge in real-world projects and contribute to an impactful company.
+            </p>
+        
+            <a href="contact.html" class="btn">Hire me</a>
+        
+            <!-- Chatbot integrado -->
+            <div class="chatbot-section">
+                <input type="text" id="chat-input" placeholder="Pregunta lo que quieras saber sobre mí" />
+                <div id="chat-messages"></div>
+            </div>
+        
+            <div class="home-sci">
+                <a href="https://www.linkedin.com/in/cristian-navarro-pertegal/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/navper" target="_blank"><i class='bx bxl-github'></i></a>
+            </div> 
+        </div>
+    </section>
+</body>
+</html>
+
+
