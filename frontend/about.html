@@ -1,96 +1,201 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Cristian Navarro Pertegal</title>
-    <link rel="stylesheet" href="styles.css?v=1.1">
+    <meta name="description" content="Learn about Cristian Navarro Pertegal — his background, work experience, and education.">
+    <link rel="stylesheet" href="styles.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <style>
-        .typing-effect {
-            display: inline;
-            border-right: 2px solid #00ff00;
-            white-space: pre-wrap;
-            overflow: hidden;
-            word-wrap: break-word;
-        }
-    </style>
+    <script src="translations.js"></script>
+    <script src="i18n.js"></script>
 </head>
 <body>
     <header class="header">
-        <a href="#" class="logo">Portfolio.</a>
-        <nav class="navbar">
-            <a href="index.html" style="--i:1;">Home</a>
-            <a href="about.html" style="--i:2;" class="active">About me</a>
-            <a href="skills.html" style="--i:3;">Skills</a>
-            <a href="projects.html" style="--i:4;">Projects</a>
-            <a href="contact.html" style="--i:5;">Contact</a>
-        </nav>
+        <a href="index.html" class="logo">Portfolio.</a>
+        <div class="header-right">
+            <nav class="navbar">
+                <a href="index.html" style="--i:1;" data-i18n="nav.home">Home</a>
+                <a href="about.html" style="--i:2;" class="active" data-i18n="nav.about">About me</a>
+                <a href="skills.html" style="--i:3;" data-i18n="nav.skills">Skills</a>
+                <a href="projects.html" style="--i:4;" data-i18n="nav.projects">Projects</a>
+                <a href="contact.html" style="--i:5;" data-i18n="nav.contact">Contact</a>
+            </nav>
+            <div class="lang-switcher">
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="es">ES</button>
+            </div>
+            <button class="hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </header>
 
+    <nav class="mobile-nav-overlay" id="mobile-nav" aria-hidden="true">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="about.html" class="active" data-i18n="nav.about">About me</a>
+        <a href="skills.html" data-i18n="nav.skills">Skills</a>
+        <a href="projects.html" data-i18n="nav.projects">Projects</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        <div class="lang-switcher" style="margin-top: 12px;">
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="es">ES</button>
+        </div>
+    </nav>
+
     <section class="about">
-        <h2>About Me</h2>
+        <h2 data-i18n="about.title">About Me</h2>
         <div class="about-content">
             <div class="terminal">
                 <p id="about-text" class="typing-effect"></p>
             </div>
 
             <div class="about-section">
-                <h3><span class="timeline-icon"><i class='bx bxs-briefcase'></i></span> Work Experience</h3>
+                <h3>
+                    <span class="timeline-icon"><i class='bx bxs-briefcase'></i></span>
+                    <span data-i18n="about.workExp">Work Experience</span>
+                </h3>
                 <div class="timeline">
+
+                    <!-- Indalweb: .NET ASP Developer -->
                     <div class="timeline-item">
-                        <h4><span class="timeline-icon"><i class='bx bxs-briefcase'></i></span> Odoo Developer</h4>
-                        <p><strong>Company:</strong> Abogados Asociados Damián Montoya</p>
-                        <p><strong>Duration:</strong> 2024</p>
-                        <p>As part of a team, I was responsible for designing and developing a management app, including database creation, Odoo module development, and client meetings.</p>
+                        <h4>
+                            <span class="timeline-icon"><i class='bx bx-code-alt'></i></span>
+                            <span data-i18n="about.dotnetDev">.NET ASP Developer</span>
+                        </h4>
+                        <p><strong data-i18n="label.company">Company:</strong> Indalweb Internet SL</p>
+                        <p><strong data-i18n="label.dates">Dates:</strong> 08/2025 – 02/2026</p>
+                        <p><strong data-i18n="label.location">Location:</strong> El Ejido, Spain</p>
+                        <ul class="timeline-desc">
+                            <li data-i18n="about.dotnetDesc1">Developed a basketball club management application using .NET, Razor Pages, and Entity Framework.</li>
+                            <li data-i18n="about.dotnetDesc2">Implemented an intelligent AI support system using the OpenAI API and RAG architecture.</li>
+                            <li data-i18n="about.dotnetDesc3">Designed and built responsive interfaces using HTML5, CSS3, and Bootstrap.</li>
+                        </ul>
                     </div>
+
+                    <!-- Transnaba: Python Developer -->
                     <div class="timeline-item">
-                        <h4><span class="timeline-icon"><i class='bx bxs-wrench'></i></span> Computer and Mobile Device Repair Technician</h4>
-                        <p><strong>Company:</strong> Mediamarkt</p>
-                        <p><strong>Duration:</strong> 2024</p>
-                        <p>Diagnosed and repaired a variety of electronic devices, performing routine maintenance tasks to ensure the optimal functionality of devices.</p>
+                        <h4>
+                            <span class="timeline-icon"><i class='bx bxl-python'></i></span>
+                            <span data-i18n="about.pythonDev">Python Developer</span>
+                        </h4>
+                        <p><strong data-i18n="label.company">Company:</strong> Transnaba Orihuela SL</p>
+                        <p><strong data-i18n="label.dates">Dates:</strong> 12/2024 – 05/2025</p>
+                        <p><strong data-i18n="label.location">Location:</strong> Orihuela, Spain</p>
+                        <ul class="timeline-desc">
+                            <li data-i18n="about.pythonDesc1">Developed a Python application to assist with the workshop's daily operations.</li>
+                            <li data-i18n="about.pythonDesc2">Implemented a vehicle entry/exit control system with status and repair-needs monitoring.</li>
+                            <li data-i18n="about.pythonDesc3">Centralized information management to optimize organization and improve team efficiency.</li>
+                        </ul>
                     </div>
+
+                    <!-- Abogados Damián Montoya: Odoo Developer -->
+                    <div class="timeline-item">
+                        <h4>
+                            <span class="timeline-icon"><i class='bx bxs-briefcase'></i></span>
+                            <span data-i18n="about.odooDev">Odoo Developer</span>
+                        </h4>
+                        <p><strong data-i18n="label.company">Company:</strong> Abogados Asociados Damián Montoya</p>
+                        <p><strong data-i18n="label.duration">Duration:</strong> 2024</p>
+                        <p data-i18n="about.odooDesc">As part of a team, I was responsible for designing and developing a management app, including database creation, Odoo module development, and client meetings.</p>
+                    </div>
+
+                    <!-- Mediamarkt: Repair Technician -->
+                    <div class="timeline-item">
+                        <h4>
+                            <span class="timeline-icon"><i class='bx bxs-wrench'></i></span>
+                            <span data-i18n="about.techRole">Computer and Mobile Device Repair Technician</span>
+                        </h4>
+                        <p><strong data-i18n="label.company">Company:</strong> Mediamarkt</p>
+                        <p><strong data-i18n="label.duration">Duration:</strong> 2024</p>
+                        <p data-i18n="about.mediaDesc">Diagnosed and repaired a variety of electronic devices, performing routine maintenance tasks to ensure the optimal functionality of devices.</p>
+                    </div>
+
                 </div>
             </div>
 
             <div class="about-section">
-                <h3><span class="timeline-icon"><i class='bx bxs-graduation'></i></span> Education</h3>
+                <h3>
+                    <span class="timeline-icon"><i class='bx bxs-graduation'></i></span>
+                    <span data-i18n="about.education">Education</span>
+                </h3>
                 <div class="timeline">
                     <div class="timeline-item">
-                        <h4><span class="timeline-icon"><i class='bx bxs-graduation'></i></span> Higher Degree in Multiplatform Software Development</h4>
-                        <p><strong>Institution:</strong> IES Las Espeñetas</p>
-                        <p><strong>Year:</strong> 2022 - 2024</p>
+                        <h4>
+                            <span class="timeline-icon"><i class='bx bxs-graduation'></i></span>
+                            <span data-i18n="about.edu1Title">Higher Degree in Multiplatform Software Development</span>
+                        </h4>
+                        <p><strong data-i18n="label.institution">Institution:</strong> IES Las Espeñetas</p>
+                        <p><strong data-i18n="label.year">Year:</strong> 2022 - 2024</p>
                     </div>
                     <div class="timeline-item">
-                        <h4><span class="timeline-icon"><i class='bx bxs-palette'></i></span> Higher Technician Design in Advertising Graphics</h4>
-                        <p><strong>Institution:</strong> Escuela de Arte y Superior de Diseño de Orihuela</p>
-                        <p><strong>Year:</strong> 2020 - 2022</p>
+                        <h4>
+                            <span class="timeline-icon"><i class='bx bxs-palette'></i></span>
+                            <span data-i18n="about.edu2Title">Higher Technician Design in Advertising Graphics</span>
+                        </h4>
+                        <p><strong data-i18n="label.institution">Institution:</strong> Escuela de Arte y Superior de Diseño de Orihuela</p>
+                        <p><strong data-i18n="label.year">Year:</strong> 2020 - 2022</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
     <script>
-        window.onload = function() {
-            setTimeout(function() {
-                const text = "\n Hi, I'm Cristian Navarro Pertegal, a software developer from Orihuela, Spain. I hold a degree in Multiplatform Software Development and have experience in developing management apps and business solutions.\n\nI’ve always been passionate about technology and graphic design. Over time, I dove deeper into IT, starting with basic scripts and watching tutorials on YouTube, until I realized that what I truly wanted was to study programming. I shifted my focus from graphic design to application development, recently graduating in this field. Today, my love for programming and my eagerness to learn new technologies are stronger than ever. I’m driven to keep growing professionally and to contribute to building applications that not only solve problems but also provide unique user experiences.\n\nMy goal is to continue honing my skills and collaborating on innovative projects where I can apply everything I’ve learned and keep improving every day.";
-                const typingSpeed = 50;
-                let i = 0;
+        // Terminal typing animation — language-aware
+        var typingTimer = null;
 
-                function typeWriter() {
-                    if (i < text.length) {
-                        document.getElementById('about-text').innerHTML += text.charAt(i);
-                        i++;
-                        setTimeout(typeWriter, typingSpeed);
-                    }
+        function startTyping() {
+            var textEl = document.getElementById('about-text');
+            textEl.innerHTML = '';
+            var text = window.i18n ? window.i18n.t('about.bio') : '';
+            var speed = 15;
+            var i = 0;
+
+            if (typingTimer) clearTimeout(typingTimer);
+
+            function typeWriter() {
+                if (i < text.length) {
+                    textEl.innerHTML += text.charAt(i);
+                    i++;
+                    typingTimer = setTimeout(typeWriter, speed);
                 }
+            }
+            typeWriter();
+        }
 
-                typeWriter();
-            }, 500);
+        window.onload = function () {
+            setTimeout(startTyping, 400);
         };
+
+        // Re-type when language switches
+        document.addEventListener('languageChanged', function () {
+            startTyping();
+        });
+
+        // Hamburger toggle
+        document.addEventListener("DOMContentLoaded", function () {
+            var hamburgerBtn = document.getElementById('hamburger-btn');
+            var mobileNav    = document.getElementById('mobile-nav');
+
+            hamburgerBtn.addEventListener('click', function () {
+                var isOpen = hamburgerBtn.classList.toggle('open');
+                mobileNav.classList.toggle('open', isOpen);
+                hamburgerBtn.setAttribute('aria-expanded', isOpen);
+                mobileNav.setAttribute('aria-hidden', !isOpen);
+                document.body.style.overflow = isOpen ? 'hidden' : '';
+            });
+
+            mobileNav.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    hamburgerBtn.classList.remove('open');
+                    mobileNav.classList.remove('open');
+                    hamburgerBtn.setAttribute('aria-expanded', 'false');
+                    mobileNav.setAttribute('aria-hidden', 'true');
+                    document.body.style.overflow = '';
+                });
+            });
+        });
     </script>
 </body>
 </html>

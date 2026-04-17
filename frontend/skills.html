@@ -1,69 +1,536 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skills - Cristian Navarro Pertegal</title>
+    <meta name="description"
+        content="Technical skills of Cristian Navarro Pertegal — .NET, Python, Java, JavaScript, OpenAI, Odoo, PostgreSQL and more.">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="skills.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/devicons/devicon/master/devicon.min.css"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="translations.js"></script>
+    <script src="i18n.js"></script>
 </head>
+
 <body>
     <header class="header">
-        <a href="#" class="logo">Portfolio.</a>
-        <nav class="navbar">
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html">About me</a>
-            <a href="skills.html">Skills</a> 
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+        <a href="index.html" class="logo">Portfolio.</a>
+        <div class="header-right">
+            <nav class="navbar">
+                <a href="index.html" style="--i:1;" data-i18n="nav.home">Home</a>
+                <a href="about.html" style="--i:2;" data-i18n="nav.about">About me</a>
+                <a href="skills.html" style="--i:3;" class="active" data-i18n="nav.skills">Skills</a>
+                <a href="projects.html" style="--i:4;" data-i18n="nav.projects">Projects</a>
+                <a href="contact.html" style="--i:5;" data-i18n="nav.contact">Contact</a>
+            </nav>
+            <div class="lang-switcher">
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="es">ES</button>
+            </div>
+            <button class="hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </header>
 
-    <section class="skills">
-        <h2>Skills</h2>
-        <div class="skills-container">
-            <div class="skill">
-                <i class='bx bxl-html5 skill-logo'></i> 
-                <h4>HTML</h4>
+    <nav class="mobile-nav-overlay" id="mobile-nav" aria-hidden="true">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="about.html" data-i18n="nav.about">About me</a>
+        <a href="skills.html" class="active" data-i18n="nav.skills">Skills</a>
+        <a href="projects.html" data-i18n="nav.projects">Projects</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        <div class="lang-switcher" style="margin-top: 12px;">
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="es">ES</button>
+        </div>
+    </nav>
+
+    <main class="skills-main">
+
+        <!-- Hero -->
+        <div class="skills-hero">
+            <p class="skills-label">// my toolkit</p>
+            <h1 class="skills-title">
+                <span data-i18n="skills.title">Skills</span>
+                <span class="gradient-text">&amp; Technologies</span>
+            </h1>
+            <p class="skills-subtitle" data-i18n="skills.subtitle">
+                A curated set of tools and languages I use to build things — from backend systems to AI-powered apps.
+            </p>
+        </div>
+
+        <!-- ── CATEGORY: Languages ── -->
+        <div class="skill-category" id="cat-languages">
+            <div class="category-header">
+                <span class="cat-dot" style="background: linear-gradient(135deg, #ff0066, #ff6b35);"></span>
+                <h2 data-i18n="skills.cat.languages">Languages</h2>
             </div>
-            <div class="skill">
-                <i class='bx bxl-css3 skill-logo'></i> 
-                <h4>CSS</h4>
-            </div>
-            <div class="skill">
-                <i class='bx bxl-python skill-logo'></i> 
-                <h4>Python</h4>
-            </div>
-            <div class="skill">
-                <i class='bx bxl-javascript skill-logo'></i> 
-                <h4>JavaScript</h4>
-            </div>
-            <div class="skill">
-                <i class='bx bx-circle skill-logo'></i> 
-                <h4>Odoo</h4>
-            </div>
-            <div class="skill">
-                <i class='devicon-postgresql-plain skill-logo'></i> 
-                <h4>SQL</h4>
-            </div>
-            <div class="skill">
-                <i class='devicon-mysql-plain skill-logo'></i> 
-                <h4>MySQL</h4>
-            </div>
-            <div class="skill">
-                <i class='devicon-java-plain skill-logo'></i> 
-                <h4>Java</h4>
-            </div>
-            <div class="skill">
-                <i class='devicon-kotlin-plain skill-logo'></i> 
-                <h4>Kotlin</h4>
-            </div>
-            <div class="skill">
-                <i class='bx bxl-git skill-logo'></i> 
-                <h4>Git</h4>
+            <div class="skill-grid">
+
+                <div class="skill-card" data-delay="0">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon-wrap" style="--icon-color: #e34c26;">
+                            <i class="devicon-html5-plain"></i>
+                        </div>
+                        <div class="skill-info">
+                            <span class="skill-name">HTML5</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--fill: 95%; --bar-color: #e34c26;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-delay="60">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon-wrap" style="--icon-color: #264de4;">
+                            <i class="devicon-css3-plain"></i>
+                        </div>
+                        <div class="skill-info">
+                            <span class="skill-name">CSS3</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--fill: 90%; --bar-color: #264de4;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-delay="120">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon-wrap" style="--icon-color: #f0db4f;">
+                            <i class="devicon-javascript-plain"></i>
+                        </div>
+                        <div class="skill-info">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--fill: 75%; --bar-color: #f0db4f;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-delay="180">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon-wrap" style="--icon-color: #3572A5;">
+                            <i class="devicon-python-plain"></i>
+                        </div>
+                        <div class="skill-info">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--fill: 100%; --bar-color: #3572A5;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-delay="240">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon-wrap" style="--icon-color: #b07219;">
+                            <i class="devicon-java-plain"></i>
+                        </div>
+                        <div class="skill-info">
+                            <span class="skill-name">Java</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--fill: 80%; --bar-color: #b07219;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-    </section>
+
+        <!-- ── CATEGORY: Frameworks & Tools ── -->
+        <div class="skill-category" id="cat-frameworks">
+            <div class="category-header">
+                <span class="cat-dot" style="background: linear-gradient(135deg, #00ccff, #3a86ff);"></span>
+                <h2 data-i18n="skills.cat.frameworks">Frameworks &amp; Tools</h2>
+            </div>
+            <div class="skill-grid">
+
+                <div class="skill-card" data-delay="0">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon-wrap" style="--icon-color: #512bd4;">
+                            <i class="devicon-dotnetcore-plain"></i>
+                        </div>
+                        <div class="skill-info">
+                            <span class="skill-name">.NET / ASP.NET</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--fill: 70%; --bar-color: #512bd4;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-delay="60">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon-wrap" style="--icon-color: #512bd4;">
+                            <i class="devicon-dotnetcore-plain" style="opacity:0.65;"></i>
+                        </div>
+                        <div class="skill-info">
+                            <span class="skill-name">Entity Framework</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--fill: 65%; --bar-color: #512bd4;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-delay="120">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon-wrap" style="--icon-color: #563d7c;">
+                            <i class="devicon-bootstrap-plain"></i>
+                        </div>
+                        <div class="skill-info">
+                            <span class="skill-name">Bootstrap</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--fill: 80%; --bar-color: #563d7c;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-delay="180">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon-wrap" style="--icon-color: #714B67;">
+                            <i class="bx bx-cube-alt" style="font-size:2rem;"></i>
+                        </div>
+                        <div class="skill-info">
+                            <span class="skill-name">Odoo ERP</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--fill: 75%; --bar-color: #714B67;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ── CATEGORY: Databases ── -->
+        <div class="skill-category" id="cat-databases">
+            <div class="category-header">
+                <span class="cat-dot" style="background: linear-gradient(135deg, #00d4aa, #00b89c);"></span>
+                <h2 data-i18n="skills.cat.databases">Databases</h2>
+            </div>
+            <div class="skill-grid">
+
+                <div class="skill-card" data-delay="0">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon-wrap" style="--icon-color: #336791;">
+                            <i class="devicon-postgresql-plain"></i>
+                        </div>
+                        <div class="skill-info">
+                            <span class="skill-name">PostgreSQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--fill: 80%; --bar-color: #336791;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-delay="60">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon-wrap" style="--icon-color: #00758f;">
+                            <i class="devicon-mysql-plain"></i>
+                        </div>
+                        <div class="skill-info">
+                            <span class="skill-name">MySQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--fill: 75%; --bar-color: #00758f;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-delay="120">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon-wrap" style="--icon-color: #c0392b;">
+                            <i class="bx bx-data" style="font-size:2rem;"></i>
+                        </div>
+                        <div class="skill-info">
+                            <span class="skill-name">SQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--fill: 85%; --bar-color: #c0392b;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ── CATEGORY: AI & Machine Learning ── -->
+        <div class="skill-category" id="cat-ai">
+            <div class="category-header">
+                <span class="cat-dot" style="background: linear-gradient(135deg, #a855f7, #ec4899);"></span>
+                <h2 data-i18n="skills.cat.ai">AI &amp; Machine Learning</h2>
+            </div>
+            <div class="skill-grid">
+
+                <div class="skill-card" data-delay="0">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon-wrap" style="--icon-color: #FF6F00;">
+                            <i class="devicon-tensorflow-original"></i>
+                        </div>
+                        <div class="skill-info">
+                            <span class="skill-name">TensorFlow</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--fill: 70%; --bar-color: #FF6F00;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-delay="60">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon-wrap" style="--icon-color: #ee4c2c;">
+                            <i class="devicon-pytorch-original"></i>
+                        </div>
+                        <div class="skill-info">
+                            <span class="skill-name">PyTorch</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--fill: 65%; --bar-color: #ee4c2c;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-delay="120">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon-wrap" style="--icon-color: #f7941e;">
+                            <i class="devicon-scikitlearn-plain"></i>
+                        </div>
+                        <div class="skill-info">
+                            <span class="skill-name">Scikit-Learn</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--fill: 70%; --bar-color: #f7941e;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-delay="180">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon-wrap" style="--icon-color: #150458;">
+                            <i class="devicon-pandas-original"></i>
+                        </div>
+                        <div class="skill-info">
+                            <span class="skill-name">Pandas</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--fill: 75%; --bar-color: #150458;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-delay="240">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon-wrap" style="--icon-color: #FFD21E;">
+                            <span style="font-size:1.7rem; line-height:1;">🤗</span>
+                        </div>
+                        <div class="skill-info">
+                            <span class="skill-name">Hugging Face</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--fill: 60%; --bar-color: #FFD21E;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-delay="300">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon-wrap" style="--icon-color: #1c3c3c;">
+                            <i class="bx bx-link-alt" style="font-size:2rem;"></i>
+                        </div>
+                        <div class="skill-info">
+                            <span class="skill-name">LangChain</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--fill: 65%; --bar-color: #00c2a8;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-delay="360">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon-wrap" style="--icon-color: #45B58A;">
+                            <i class="bx bx-pyramid" style="font-size:2rem;"></i>
+                        </div>
+                        <div class="skill-info">
+                            <span class="skill-name">Pinecone</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--fill: 60%; --bar-color: #45B58A;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-delay="420">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon-wrap" style="--icon-color: #e91e63;">
+                            <i class="bx bx-search-alt" style="font-size:2rem;"></i>
+                        </div>
+                        <div class="skill-info">
+                            <span class="skill-name">RAG</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--fill: 70%; --bar-color: #e91e63;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-delay="480">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon-wrap" style="--icon-color: #a855f7;">
+                            <i class="bx bx-brain" style="font-size:2rem;"></i>
+                        </div>
+                        <div class="skill-info">
+                            <span class="skill-name">Neural Networks</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--fill: 65%; --bar-color: #a855f7;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-delay="540">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon-wrap" style="--icon-color: #10a37f;">
+                            <i class="bx bx-bot" style="font-size:2rem;"></i>
+                        </div>
+                        <div class="skill-info">
+                            <span class="skill-name">OpenAI API</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--fill: 75%; --bar-color: #10a37f;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ── CATEGORY: Tools & Other ── -->
+        <div class="skill-category" id="cat-tools">
+            <div class="category-header">
+                <span class="cat-dot" style="background: linear-gradient(135deg, #f59e0b, #f97316);"></span>
+                <h2 data-i18n="skills.cat.tools">Tools &amp; Other</h2>
+            </div>
+            <div class="skill-grid">
+
+                <div class="skill-card" data-delay="0">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon-wrap" style="--icon-color: #f05032;">
+                            <i class="devicon-git-plain"></i>
+                        </div>
+                        <div class="skill-info">
+                            <span class="skill-name">Git</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--fill: 85%; --bar-color: #f05032;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-delay="60">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon-wrap" style="--icon-color: #161b22;">
+                            <i class="devicon-github-original"></i>
+                        </div>
+                        <div class="skill-info">
+                            <span class="skill-name">GitHub</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--fill: 85%; --bar-color: #888;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-delay="120">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon-wrap" style="--icon-color: #0089D6;">
+                            <i class="devicon-azure-plain"></i>
+                        </div>
+                        <div class="skill-info">
+                            <span class="skill-name">Azure</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--fill: 60%; --bar-color: #0089D6;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-delay="180">
+                    <div class="skill-card-inner">
+                        <div class="skill-icon-wrap" style="--icon-color: #2496ED;">
+                            <i class="devicon-docker-plain"></i>
+                        </div>
+                        <div class="skill-info">
+                            <span class="skill-name">Docker</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="--fill: 55%; --bar-color: #2496ED;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        // Hamburger
+        document.addEventListener("DOMContentLoaded", function () {
+            var hamburgerBtn = document.getElementById('hamburger-btn');
+            var mobileNav = document.getElementById('mobile-nav');
+
+            hamburgerBtn.addEventListener('click', function () {
+                var isOpen = hamburgerBtn.classList.toggle('open');
+                mobileNav.classList.toggle('open', isOpen);
+                hamburgerBtn.setAttribute('aria-expanded', isOpen);
+                mobileNav.setAttribute('aria-hidden', !isOpen);
+                document.body.style.overflow = isOpen ? 'hidden' : '';
+            });
+
+            mobileNav.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    hamburgerBtn.classList.remove('open');
+                    mobileNav.classList.remove('open');
+                    hamburgerBtn.setAttribute('aria-expanded', 'false');
+                    mobileNav.setAttribute('aria-hidden', 'true');
+                    document.body.style.overflow = '';
+                });
+            });
+
+            // Animate skill bars & cards on scroll
+            var cards = document.querySelectorAll('.skill-card');
+
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        var card = entry.target;
+                        var delay = parseInt(card.dataset.delay || 0);
+                        setTimeout(function () {
+                            card.classList.add('visible');
+                            // Trigger bar fill
+                            var bar = card.querySelector('.skill-fill');
+                            if (bar) bar.classList.add('animate');
+                        }, delay);
+                        observer.unobserve(card);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            cards.forEach(function (c) { observer.observe(c); });
+        });
+    </script>
 </body>
+
 </html>

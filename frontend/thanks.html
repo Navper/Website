@@ -1,90 +1,124 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gracias</title>
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Import the provided CSS -->
+    <title>Thank You - Cristian Navarro Pertegal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <script src="translations.js"></script>
+    <script src="i18n.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            background: #0c1022;
-            color: #fff;
+        .thanks-main {
+            min-height: 100vh;
             display: flex;
-            justify-content: center;
             align-items: center;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .thanks-container {
+            justify-content: center;
             text-align: center;
-            background: rgba(255, 255, 255, 0.1); /* Mantén el fondo semi-transparente */
-            padding: 40px 20px;
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Ajusta la sombra para mayor contraste */
-            animation: fadeIn 1.5s ease-in-out;
+            padding: 100px 20px;
         }
-
-        .thanks-container i {
-            font-size: 50px;
-            color: #f06; /* Usa el mismo degradado o color que en tu proyecto */
+        .thanks-container {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 50px 40px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 500px;
+            backdrop-filter: blur(10px);
+            animation: fadeIn 0.6s ease-out;
+        }
+        .thanks-icon {
+            font-size: 5rem;
+            color: #00ff88;
+            margin-bottom: 20px;
             animation: bounce 2s infinite;
         }
-
-        h1 {
-            margin: 20px 0;
-            font-size: 36px;
-            color: #fff; /* Blanco para mayor legibilidad sobre el fondo oscuro */
+        .thanks-title {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #fff;
         }
-
-        p {
-            font-size: 18px;
-            color: #ddd; /* Texto gris claro para una lectura cómoda */
+        .thanks-message {
+            font-size: 1.1rem;
+            color: #9ba3c2;
+            margin-bottom: 30px;
+            line-height: 1.6;
         }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-20px);
-            }
-            60% {
-                transform: translateY(-10px);
-            }
-        }
-
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-20px); }
+            60% { transform: translateY(-10px); }
         }
     </style>
 </head>
 <body>
+    <header class="header">
+        <a href="index.html" class="logo">Portfolio.</a>
+        <div class="header-right">
+            <nav class="navbar">
+                <a href="index.html" style="--i:1;" data-i18n="nav.home">Home</a>
+                <a href="about.html" style="--i:2;" data-i18n="nav.about">About me</a>
+                <a href="skills.html" style="--i:3;" data-i18n="nav.skills">Skills</a>
+                <a href="projects.html" style="--i:4;" data-i18n="nav.projects">Projects</a>
+                <a href="contact.html" style="--i:5;" data-i18n="nav.contact">Contact</a>
+            </nav>
+            <div class="lang-switcher">
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="es">ES</button>
+            </div>
+            <button class="hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
 
-    <div class="thanks-container">
-        <i class="fas fa-check-circle"></i>
-        <h1>¡Gracias!</h1>
-        <p>Tu mensaje ha sido enviado con éxito. Gracias por ponerte interesarte en mi.</p>
-        <p>Atentamente Cristian.</p>
-        <a href="/index.html" class="btn">Volver</a>        
-    </div>
+    <nav class="mobile-nav-overlay" id="mobile-nav" aria-hidden="true">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="about.html" data-i18n="nav.about">About me</a>
+        <a href="skills.html" data-i18n="nav.skills">Skills</a>
+        <a href="projects.html" data-i18n="nav.projects">Projects</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        <div class="lang-switcher" style="margin-top: 12px;">
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="es">ES</button>
+        </div>
+    </nav>
 
+    <main class="thanks-main">
+        <div class="thanks-container">
+            <i class='bx bx-check-circle thanks-icon'></i>
+            <h1 class="thanks-title" data-i18n="thanks.title">Thank You!</h1>
+            <p class="thanks-message" data-i18n="thanks.message">Your message has been sent successfully. I will get back to you as soon as possible.</p>
+            <a href="index.html" class="btn" data-i18n="thanks.back">Back to Home</a>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var hamburgerBtn = document.getElementById('hamburger-btn');
+            var mobileNav    = document.getElementById('mobile-nav');
+
+            hamburgerBtn.addEventListener('click', function () {
+                var isOpen = hamburgerBtn.classList.toggle('open');
+                mobileNav.classList.toggle('open', isOpen);
+                hamburgerBtn.setAttribute('aria-expanded', isOpen);
+                mobileNav.setAttribute('aria-hidden', !isOpen);
+                document.body.style.overflow = isOpen ? 'hidden' : '';
+            });
+
+            mobileNav.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    hamburgerBtn.classList.remove('open');
+                    mobileNav.classList.remove('open');
+                    hamburgerBtn.setAttribute('aria-expanded', 'false');
+                    mobileNav.setAttribute('aria-hidden', 'true');
+                    document.body.style.overflow = '';
+                });
+            });
+        });
+    </script>
 </body>
 </html>

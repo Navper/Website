@@ -1,33 +1,396 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Coming Soon</title>
+    <title>Projects - Cristian Navarro Pertegal</title>
+    <meta name="description" content="Portfolio projects by Cristian Navarro Pertegal — AI bots, Java apps, web development, and business software.">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="projects.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="translations.js"></script>
+    <script src="i18n.js"></script>
 </head>
-
 <body>
     <header class="header">
-        <a href="#" class="logo">Portfolio.</a>
-        <nav class="navbar">
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html">About</a>
-            <a href="skills.html">Skills</a>
-            <a href="projects.html" class="active">Projects</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+        <a href="index.html" class="logo">Portfolio.</a>
+        <div class="header-right">
+            <nav class="navbar">
+                <a href="index.html" style="--i:1;" data-i18n="nav.home">Home</a>
+                <a href="about.html" style="--i:2;" data-i18n="nav.about">About me</a>
+                <a href="skills.html" style="--i:3;" data-i18n="nav.skills">Skills</a>
+                <a href="projects.html" style="--i:4;" class="active" data-i18n="nav.projects">Projects</a>
+                <a href="contact.html" style="--i:5;" data-i18n="nav.contact">Contact</a>
+            </nav>
+            <div class="lang-switcher">
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="es">ES</button>
+            </div>
+            <button class="hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </header>
 
-    <section class="coming-soon">
-        <h1>Portfolio</h1>
-        <h2>Coming Soon...</h2>
-        <div class="loader"></div>
-        <div class="github-message">
-            <span>Meanwhile, you can visit my GitHub:</span>
-            <a href="https://github.com/navper" target="_blank"><i class='bx bxl-github github-icon'></i></a>
+    <nav class="mobile-nav-overlay" id="mobile-nav" aria-hidden="true">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="about.html" data-i18n="nav.about">About me</a>
+        <a href="skills.html" data-i18n="nav.skills">Skills</a>
+        <a href="projects.html" class="active" data-i18n="nav.projects">Projects</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        <div class="lang-switcher" style="margin-top: 12px;">
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="es">ES</button>
         </div>
-    </section>
+    </nav>
+
+    <!-- Animated background particles -->
+    <div class="particles-bg" id="particles-bg"></div>
+
+    <main class="projects-main">
+
+        <!-- Hero header -->
+        <div class="projects-hero">
+            <p class="projects-label" data-i18n="projects.label">// my work</p>
+            <h1 class="projects-title">
+                <span data-i18n="projects.titlePlain">Featured</span>
+                <span class="gradient-text" data-i18n="projects.titleGradient">Projects</span>
+            </h1>
+            <p class="projects-subtitle" data-i18n="projects.subtitle">
+                A collection of things I've built — ranging from AI-powered bots to business tools and games.
+                Each project is a story of a problem solved and something new learned.
+            </p>
+        </div>
+
+        <!-- Filter buttons -->
+        <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all" id="filter-all" data-i18n="filter.all">All</button>
+            <button class="filter-btn" data-filter="python" id="filter-python">Python</button>
+            <button class="filter-btn" data-filter="java" id="filter-java">Java</button>
+            <button class="filter-btn" data-filter="web" id="filter-web">Web</button>
+            <button class="filter-btn" data-filter="ai" id="filter-ai" data-i18n="filter.ai">AI / ML</button>
+        </div>
+
+        <!-- Projects grid -->
+        <div class="projects-grid" id="projects-grid">
+
+            <!-- Project 0: Indalweb -->
+            <article class="project-card" data-tags="web ai" id="project-indalweb">
+                <div class="card-glow" style="--glow-color: rgba(81, 43, 212, 0.15);"></div>
+                <div class="card-header-row">
+                    <div class="card-icon-wrap" style="background: linear-gradient(135deg, #512bd4, #10a37f);">
+                        <i class='bx bx-basketball'></i>
+                    </div>
+                    <div class="card-links">
+                        <!-- Private repository, no GitHub link -->
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <h2 class="card-title" data-i18n="p0.title">Indalweb Manager & AI Support</h2>
+                    <p class="card-description" data-i18n="p0.desc">
+                        A comprehensive management application for basketball clubs leveraging .NET, Razor Pages, Entity Framework, and OpenAI GPT API for a RAG-based intelligent support system.
+                    </p>
+                    <ul class="card-features">
+                        <li><i class='bx bx-check-circle'></i> <span data-i18n="p0.f1">.NET & Razor Pages for UI/UX</span></li>
+                        <li><i class='bx bx-check-circle'></i> <span data-i18n="p0.f2">Entity Framework database management</span></li>
+                        <li><i class='bx bx-check-circle'></i> <span data-i18n="p0.f3">Generative AI support with OpenAI API</span></li>
+                        <li><i class='bx bx-check-circle'></i> <span data-i18n="p0.f4">RAG architecture integration</span></li>
+                    </ul>
+                </div>
+
+                <div class="card-footer">
+                    <div class="tech-tags">
+                        <span class="tag tag-default">.NET</span>
+                        <span class="tag tag-web">Razor</span>
+                        <span class="tag tag-ai">OpenAI</span>
+                        <span class="tag tag-ai">RAG</span>
+                    </div>
+                    <span class="card-status status-done" data-i18n="p0.status">Professional</span>
+                </div>
+            </article>
+
+            <!-- Project 1: Discord TTS Bot -->
+            <article class="project-card" data-tags="python ai" id="project-discord-tts">
+                <div class="card-glow"></div>
+                <div class="card-header-row">
+                    <div class="card-icon-wrap" style="background: linear-gradient(135deg, #5865F2, #7289DA);">
+                        <i class='bx bxl-discord-alt'></i>
+                    </div>
+                    <div class="card-links">
+                        <a href="https://github.com/navper" target="_blank" title="GitHub" class="card-link-btn" id="link-discord-github">
+                            <i class='bx bxl-github'></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <h2 class="card-title" data-i18n="p1.title">AI Discord TTS Bot</h2>
+                    <p class="card-description" data-i18n="p1.desc">
+                        A modular Discord bot that integrates Coqui TTS for high-quality AI-generated voice synthesis
+                        and cloning. Users can join voice channels, select custom voices, and stream AI-generated speech in real time.
+                    </p>
+                    <ul class="card-features">
+                        <li><i class='bx bx-check-circle'></i> <span data-i18n="p1.f1">Asynchronous audio streaming via Discord</span></li>
+                        <li><i class='bx bx-check-circle'></i> <span data-i18n="p1.f2">Voice cloning with Coqui TTS engine</span></li>
+                        <li><i class='bx bx-check-circle'></i> <span data-i18n="p1.f3">Modular command architecture</span></li>
+                        <li><i class='bx bx-check-circle'></i> <span data-i18n="p1.f4">Production-ready error handling & logging</span></li>
+                    </ul>
+                </div>
+
+                <div class="card-footer">
+                    <div class="tech-tags">
+                        <span class="tag tag-python">Python</span>
+                        <span class="tag tag-ai">Coqui TTS</span>
+                        <span class="tag tag-ai">AI</span>
+                        <span class="tag tag-default">discord.py</span>
+                    </div>
+                    <span class="card-status status-wip" data-i18n="p1.status">In Progress</span>
+                </div>
+            </article>
+
+            <!-- Project 2: Personal Portfolio Website -->
+            <article class="project-card" data-tags="web" id="project-portfolio">
+                <div class="card-glow" style="--glow-color: rgba(0,255,255,0.15);"></div>
+                <div class="card-header-row">
+                    <div class="card-icon-wrap" style="background: linear-gradient(135deg, #ff0066, #00ccff);">
+                        <i class='bx bx-code-alt'></i>
+                    </div>
+                    <div class="card-links">
+                        <a href="https://github.com/navper" target="_blank" title="GitHub" class="card-link-btn" id="link-portfolio-github">
+                            <i class='bx bxl-github'></i>
+                        </a>
+                        <a href="index.html" title="Live" class="card-link-btn" id="link-portfolio-live">
+                            <i class='bx bx-link-external'></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <h2 class="card-title" data-i18n="p2.title">Personal Portfolio Website</h2>
+                    <p class="card-description" data-i18n="p2.desc">
+                        This very website! A full-stack portfolio featuring a dark glassmorphism design, animated UI
+                        components, and an integrated AI chatbot powered by Gemini that answers questions about me in real time.
+                    </p>
+                    <ul class="card-features">
+                        <li><i class='bx bx-check-circle'></i> <span data-i18n="p2.f1">AI chatbot with typing animation</span></li>
+                        <li><i class='bx bx-check-circle'></i> <span data-i18n="p2.f2">Multi-page animated layout</span></li>
+                        <li><i class='bx bx-check-circle'></i> <span data-i18n="p2.f3">Node.js + Express backend</span></li>
+                        <li><i class='bx bx-check-circle'></i> <span data-i18n="p2.f4">Deployed on Netlify & Render</span></li>
+                    </ul>
+                </div>
+
+                <div class="card-footer">
+                    <div class="tech-tags">
+                        <span class="tag tag-web">HTML</span>
+                        <span class="tag tag-web">CSS</span>
+                        <span class="tag tag-web">JavaScript</span>
+                        <span class="tag tag-default">Node.js</span>
+                        <span class="tag tag-ai">Gemini AI</span>
+                    </div>
+                    <span class="card-status status-live" data-i18n="p2.status">Live</span>
+                </div>
+            </article>
+
+            <!-- Project 3: Pokédex Java -->
+            <article class="project-card" data-tags="java" id="project-pokedex">
+                <div class="card-glow" style="--glow-color: rgba(255,200,0,0.12);"></div>
+                <div class="card-header-row">
+                    <div class="card-icon-wrap" style="background: linear-gradient(135deg, #e63900, #ffcc00);">
+                        <i class='bx bx-joystick'></i>
+                    </div>
+                    <div class="card-links">
+                        <a href="https://github.com/navper" target="_blank" title="GitHub" class="card-link-btn" id="link-pokedex-github">
+                            <i class='bx bxl-github'></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <h2 class="card-title" data-i18n="p3.title">Pokédex with Battle System</h2>
+                    <p class="card-description" data-i18n="p3.desc">
+                        A Java desktop application featuring a full Pokédex browser and a turn-based combat system.
+                        Built with object-oriented principles, it simulates Pokémon moves, types, and stat-based damage calculation.
+                    </p>
+                    <ul class="card-features">
+                        <li><i class='bx bx-check-circle'></i> <span data-i18n="p3.f1">Full Pokédex with species info</span></li>
+                        <li><i class='bx bx-check-circle'></i> <span data-i18n="p3.f2">Turn-based battle engine</span></li>
+                        <li><i class='bx bx-check-circle'></i> <span data-i18n="p3.f3">Type effectiveness system</span></li>
+                        <li><i class='bx bx-check-circle'></i> <span data-i18n="p3.f4">Object-oriented architecture</span></li>
+                    </ul>
+                </div>
+
+                <div class="card-footer">
+                    <div class="tech-tags">
+                        <span class="tag tag-java">Java</span>
+                        <span class="tag tag-default">OOP</span>
+                        <span class="tag tag-default">Swing / CLI</span>
+                    </div>
+                    <span class="card-status status-done" data-i18n="p3.status">Completed</span>
+                </div>
+            </article>
+
+            <!-- Project 4: Truck Management App -->
+            <article class="project-card" data-tags="java" id="project-trucks">
+                <div class="card-glow" style="--glow-color: rgba(50,180,100,0.12);"></div>
+                <div class="card-header-row">
+                    <div class="card-icon-wrap" style="background: linear-gradient(135deg, #1a7a4a, #32b464);">
+                        <i class='bx bx-bus'></i>
+                    </div>
+                    <div class="card-links">
+                        <a href="https://github.com/navper" target="_blank" title="GitHub" class="card-link-btn" id="link-trucks-github">
+                            <i class='bx bxl-github'></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <h2 class="card-title" data-i18n="p4.title">Workshop Truck Dispatch Manager</h2>
+                    <p class="card-description" data-i18n="p4.desc">
+                        A business management application for tracking truck departures and returns in a workshop environment.
+                        Replaces manual paperwork with a clean digital interface for real-time fleet status tracking.
+                    </p>
+                    <ul class="card-features">
+                        <li><i class='bx bx-check-circle'></i> <span data-i18n="p4.f1">Real-time truck departure tracking</span></li>
+                        <li><i class='bx bx-check-circle'></i> <span data-i18n="p4.f2">Driver & route management</span></li>
+                        <li><i class='bx bx-check-circle'></i> <span data-i18n="p4.f3">Database-backed records</span></li>
+                        <li><i class='bx bx-check-circle'></i> <span data-i18n="p4.f4">Built for actual workshop use</span></li>
+                    </ul>
+                </div>
+
+                <div class="card-footer">
+                    <div class="tech-tags">
+                        <span class="tag tag-java">Java</span>
+                        <span class="tag tag-default">PostgreSQL</span>
+                        <span class="tag tag-default">JDBC</span>
+                    </div>
+                    <span class="card-status status-done" data-i18n="p4.status">Completed</span>
+                </div>
+            </article>
+
+            <!-- Project 5: Odoo ERP -->
+            <article class="project-card" data-tags="python" id="project-odoo">
+                <div class="card-glow" style="--glow-color: rgba(130,70,255,0.12);"></div>
+                <div class="card-header-row">
+                    <div class="card-icon-wrap" style="background: linear-gradient(135deg, #714fff, #a855f7);">
+                        <i class='bx bx-buildings'></i>
+                    </div>
+                    <div class="card-links">
+                        <a href="https://github.com/navper" target="_blank" title="GitHub" class="card-link-btn" id="link-odoo-github">
+                            <i class='bx bxl-github'></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <h2 class="card-title" data-i18n="p5.title">Odoo ERP Module — Law Firm</h2>
+                    <p class="card-description" data-i18n="p5.desc">
+                        Custom Odoo module developed for Abogados Asociados Damián Montoya as part of a professional internship.
+                        Involved client meetings, database design, and building bespoke business logic for case management.
+                    </p>
+                    <ul class="card-features">
+                        <li><i class='bx bx-check-circle'></i> <span data-i18n="p5.f1">Custom Odoo module development</span></li>
+                        <li><i class='bx bx-check-circle'></i> <span data-i18n="p5.f2">PostgreSQL database design</span></li>
+                        <li><i class='bx bx-check-circle'></i> <span data-i18n="p5.f3">Client-facing requirements analysis</span></li>
+                        <li><i class='bx bx-check-circle'></i> <span data-i18n="p5.f4">Team collaboration in agile environment</span></li>
+                    </ul>
+                </div>
+
+                <div class="card-footer">
+                    <div class="tech-tags">
+                        <span class="tag tag-python">Python</span>
+                        <span class="tag tag-default">Odoo</span>
+                        <span class="tag tag-default">PostgreSQL</span>
+                        <span class="tag tag-default">XML</span>
+                    </div>
+                    <span class="card-status status-done" data-i18n="p5.status">Professional</span>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- GitHub footer -->
+        <div class="projects-more">
+            <p data-i18n="projects.moreText">More projects are always in the works.</p>
+            <a href="https://github.com/navper" target="_blank" class="btn" id="btn-github-all">
+                <i class='bx bxl-github' style="margin-right:8px;"></i>
+                <span data-i18n="projects.githubBtn">See all on GitHub</span>
+            </a>
+        </div>
+
+    </main>
+
+    <script>
+        // Particle background
+        (function () {
+            var container = document.getElementById('particles-bg');
+            for (var j = 0; j < 40; j++) {
+                var dot = document.createElement('div');
+                dot.classList.add('particle');
+                dot.style.left = Math.random() * 100 + 'vw';
+                dot.style.top  = Math.random() * 100 + 'vh';
+                dot.style.animationDelay    = (Math.random() * 8) + 's';
+                dot.style.animationDuration = (6 + Math.random() * 10) + 's';
+                dot.style.width = dot.style.height = (2 + Math.random() * 3) + 'px';
+                container.appendChild(dot);
+            }
+        })();
+
+        // Filter logic
+        document.addEventListener('DOMContentLoaded', function () {
+            var filterBtns = document.querySelectorAll('.filter-btn');
+            var cards      = document.querySelectorAll('.project-card');
+
+            filterBtns.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    filterBtns.forEach(function (b) { b.classList.remove('active'); });
+                    btn.classList.add('active');
+
+                    var filter = btn.dataset.filter;
+                    cards.forEach(function (card) {
+                        var tags    = card.dataset.tags || '';
+                        var matches = filter === 'all' || tags.includes(filter);
+                        card.classList.toggle('hidden',  !matches);
+                        card.classList.toggle('visible', matches);
+                    });
+                });
+            });
+
+            // Scroll-reveal
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            cards.forEach(function (card) { observer.observe(card); });
+
+            // Hamburger
+            var hamburgerBtn = document.getElementById('hamburger-btn');
+            var mobileNav    = document.getElementById('mobile-nav');
+
+            hamburgerBtn.addEventListener('click', function () {
+                var isOpen = hamburgerBtn.classList.toggle('open');
+                mobileNav.classList.toggle('open', isOpen);
+                hamburgerBtn.setAttribute('aria-expanded', isOpen);
+                mobileNav.setAttribute('aria-hidden', !isOpen);
+                document.body.style.overflow = isOpen ? 'hidden' : '';
+            });
+
+            mobileNav.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    hamburgerBtn.classList.remove('open');
+                    mobileNav.classList.remove('open');
+                    hamburgerBtn.setAttribute('aria-expanded', 'false');
+                    mobileNav.setAttribute('aria-hidden', 'true');
+                    document.body.style.overflow = '';
+                });
+            });
+        });
+    </script>
 </body>
 </html>

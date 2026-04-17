@@ -1,43 +1,92 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Cristian Navarro Pertegal</title>
+    <title>Contact - Cristian Navarro Pertegal</title>
+    <meta name="description" content="Get in touch with Cristian Navarro Pertegal — software developer available for hire.">
     <link rel="stylesheet" href="styles.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <script src="translations.js"></script>
+    <script src="i18n.js"></script>
 </head>
 <body>
     <header class="header">
-        <a href="#" class="logo">Portfolio.</a>
-        <nav class="navbar">
-            <a href="index.html" style="--i:1;">Home</a>
-            <a href="about.html" style="--i:2;">About me</a>
-            <a href="skills.html" style="--i:3;">Skills</a>
-            <a href="projects.html" style="--i:4;">Projects</a>
-            <a href="contact.html" style="--i:5;" class="active">Contact</a>
-        </nav>
+        <a href="index.html" class="logo">Portfolio.</a>
+        <div class="header-right">
+            <nav class="navbar">
+                <a href="index.html" style="--i:1;" data-i18n="nav.home">Home</a>
+                <a href="about.html" style="--i:2;" data-i18n="nav.about">About me</a>
+                <a href="skills.html" style="--i:3;" data-i18n="nav.skills">Skills</a>
+                <a href="projects.html" style="--i:4;" data-i18n="nav.projects">Projects</a>
+                <a href="contact.html" style="--i:5;" class="active" data-i18n="nav.contact">Contact</a>
+            </nav>
+            <div class="lang-switcher">
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="es">ES</button>
+            </div>
+            <button class="hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </header>
 
+    <nav class="mobile-nav-overlay" id="mobile-nav" aria-hidden="true">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="about.html" data-i18n="nav.about">About me</a>
+        <a href="skills.html" data-i18n="nav.skills">Skills</a>
+        <a href="projects.html" data-i18n="nav.projects">Projects</a>
+        <a href="contact.html" class="active" data-i18n="nav.contact">Contact</a>
+        <div class="lang-switcher" style="margin-top: 12px;">
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="es">ES</button>
+        </div>
+    </nav>
+
     <section class="contact">
-        <h2>Contact Me</h2>
-        <form action="https://api.web3forms.com/submit" method="POST"" class="contact-form">
+        <h2 data-i18n="contact.title">Contact Me</h2>
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
             <input type="hidden" name="access_key" value="62f16fb4-80e9-4df3-88bc-539ebe3c81e3">
             <input type="hidden" name="redirect" value="https://navper.netlify.app/thanks.html">
             <div class="form-group">
-                <label for="name">Name</label>
+                <label for="name" data-i18n="contact.name">Name</label>
                 <input type="text" id="name" name="name" required>
             </div>
             <div class="form-group">
-                <label for="email">Email</label>
+                <label for="email" data-i18n="contact.email">Email</label>
                 <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
-                <label for="message">Message</label>
+                <label for="message" data-i18n="contact.message">Message</label>
                 <textarea id="message" name="message" rows="6" required></textarea>
             </div>
-            <button type="submit" class="btn1">Send Message</button>
+            <button type="submit" class="btn1" data-i18n="contact.send">Send Message</button>
         </form>
     </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var hamburgerBtn = document.getElementById('hamburger-btn');
+            var mobileNav    = document.getElementById('mobile-nav');
+
+            hamburgerBtn.addEventListener('click', function () {
+                var isOpen = hamburgerBtn.classList.toggle('open');
+                mobileNav.classList.toggle('open', isOpen);
+                hamburgerBtn.setAttribute('aria-expanded', isOpen);
+                mobileNav.setAttribute('aria-hidden', !isOpen);
+                document.body.style.overflow = isOpen ? 'hidden' : '';
+            });
+
+            mobileNav.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    hamburgerBtn.classList.remove('open');
+                    mobileNav.classList.remove('open');
+                    hamburgerBtn.setAttribute('aria-expanded', 'false');
+                    mobileNav.setAttribute('aria-hidden', 'true');
+                    document.body.style.overflow = '';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
