@@ -8,15 +8,21 @@
       "Cursando un Master en Inteligencia Artificial, EIP International Business School"
     ],
     "experiencia": [
+      "Desarrollador .NET ASP en Indalweb InternetSL (Agosto 2025 - Febrero 2026)",
+      "Desarrollador Python en Transnaba Orihuela SL (Diciembre 2024 - Mayo 2025)",
       "Desarrollador Odoo en Abogados Asociados Damián Montoya (2024)",
       "Técnico de reparación en Mediamarkt (2024)"
     ],
     "proyectos": [
+      "Aplicación de gestión deportiva con .NET y RAG AI (Indalweb)",
+      "Bot de Discord TTS con IA y Clonación de voz integrada",
       "Pokedex en Java con sistema de combate básico",
       "App de gestión de salidas de camiones en talleres"
     ],
     "habilidades": [
-      "Python", "Odoo", "PostgreSQL", "HTML", "CSS", "JavaScript", "Java", "TensorFlow", "Scikit-learn"
+      "HTML5", "CSS3", "JavaScript", "Python", "Java",
+      ".NET / ASP.NET", "Entity Framework", "SQL", "PostgreSQL", "MySQL", "Docker", "Git", "GitHub", "Azure",
+      "TensorFlow", "PyTorch", "Scikit-Learn", "Pandas", "Hugging Face", "LangChain", "Pinecone", "RAG", "Redes Neuronales", "OpenAI API"
     ],
     "idiomas": [
       "Español (nativo)",
@@ -89,9 +95,9 @@
     "gustos_extra": "Me encanta viajar, amante de los videojuegos y hacer cualquier actividad con amigos",
     "frase_favorita": "El éxito es la suma de pequeños esfuerzos repetidos cada día.",
     "links": {
-      "portfolio": "https://tupaginaweb.com",
-      "linkedin": "https://linkedin.com/in/tuusuario",
-      "github": "https://github.com/tuusuario"
+      "portfolio": "https://navper.netlify.app",
+      "linkedin": "https://linkedin.com/in/cristian-navarro-pertegal/",
+      "github": "https://github.com/navper"
     }
   }
   
