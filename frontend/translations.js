@@ -121,6 +121,7 @@ const translations = {
         'p5.f4': 'Team collaboration in agile environment',
         'p5.status': 'Professional',
 
+        'projects.private': 'Private',
         'projects.moreText': 'More projects are always in the works.',
         'projects.githubBtn': 'See all on GitHub',
 
@@ -256,6 +257,7 @@ const translations = {
         'p5.f4': 'Colaboración en equipo ágil',
         'p5.status': 'Profesional',
 
+        'projects.private': 'Privado',
         'projects.moreText': 'Siempre hay más proyectos en desarrollo.',
         'projects.githubBtn': 'GitHub',
 
