@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cristian Navarro Pertegal — Software Developer</title>
-    <meta name="description" content="Portfolio of Cristian Navarro Pertegal, a software developer from Orihuela, Spain.">
+    <meta name="description" content="Portfolio of Cristian Navarro Pertegal, a software developer from Orihuela, Spain specialising in AI apps, .NET and Python.">
     <link rel="stylesheet" href="styles.css">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <script src="translations.js"></script>
     <script src="i18n.js"></script>
 </head>
-
 <body>
+
     <header class="header">
         <a href="index.html" class="logo">Portfolio.</a>
         <div class="header-right">
@@ -44,103 +44,246 @@
         </div>
     </nav>
 
+    <!-- Particle background -->
+    <div class="home-particles" id="home-particles"></div>
+
     <section class="home">
-        <div class="profile-image">
-            <img src="assets/fotomia.png" alt="Cristian Navarro Pertegal">
-        </div>
+        <div class="home-hero">
 
-        <div class="home-content">
-            <h1 data-i18n="home.greeting">Hello, I'm Cristian Navarro Pertegal</h1>
-            <h3 data-i18n="home.role">Software Developer</h3>
-            <p data-i18n="home.bio">
-                Recent graduate with a degree in Multiplatform Application Development and experience in software
-                engineering and application development. I'm eager to apply my skills and knowledge in real-world
-                projects and contribute to an impactful company.
-            </p>
-
-            <a href="contact.html" class="btn" data-i18n="home.hire">Hire me</a>
-
-            <div class="chatbot-section">
-                <input type="text" id="chat-input"
-                    data-i18n-placeholder="home.chatPlaceholder"
-                    placeholder="Ask me anything about myself" />
-                <div id="chat-messages"></div>
+            <!-- ── Left column: photo + socials ── -->
+            <div class="hero-left">
+                <div class="profile-image">
+                    <img src="assets/fotomia.png" alt="Cristian Navarro Pertegal">
+                </div>
+                <div class="home-sci">
+                    <a href="https://www.linkedin.com/in/cristian-navarro-pertegal/" target="_blank" title="LinkedIn" id="link-home-linkedin">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                    <a href="https://github.com/navper" target="_blank" title="GitHub" id="link-home-github">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                    <a href="assets/CVCristian.pdf" target="_blank" data-i18n-title="home.cvTitle" title="Download CV" id="link-home-cv">
+                        <i class='bx bxs-file-pdf'></i>
+                    </a>
+                </div>
             </div>
 
-            <div class="home-sci">
-                <a href="https://www.linkedin.com/in/cristian-navarro-pertegal/" target="_blank" title="LinkedIn">
-                    <i class='bx bxl-linkedin'></i>
-                </a>
-                <a href="https://github.com/navper" target="_blank" title="GitHub">
-                    <i class='bx bxl-github'></i>
-                </a>
-                <a href="assets/CVCristian.pdf" target="_blank" data-i18n-title="home.cvTitle" title="Download CV">
-                    <i class='bx bxs-file-pdf'></i>
-                </a>
-            </div>
-        </div>
-    </section>
+            <!-- ── Right column: all content ── -->
+            <div class="hero-right">
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var input = document.getElementById("chat-input");
-            var chat  = document.getElementById("chat-messages");
-            var welcomeMessage = window.i18n ? window.i18n.t('home.welcome') : "Thanks for visiting my site! 😊";
-            var i = 0;
+                <p class="hero-label">// hello, world</p>
 
-            function typeWelcome() {
-                if (i < welcomeMessage.length) {
-                    chat.innerHTML = "<p><strong>Cris:<\/strong> " + welcomeMessage.substring(0, i + 1) + "<\/p>";
-                    i++;
-                    setTimeout(typeWelcome, 30);
-                }
-            }
-            chat.innerHTML = "<p><strong>Cris:<\/strong> <\/p>";
-            typeWelcome();
+                <h1 data-i18n="home.greeting">Hello, I'm Cristian Navarro Pertegal</h1>
 
-            if (input) {
-                input.addEventListener("keypress", async function (e) {
-                    if (e.key === "Enter") {
-                        var text = input.value;
-                        if (!text.trim()) return;
-                        var youLabel = window.i18n ? window.i18n.t('chat.you') : 'You:';
-                        chat.innerHTML += "<p><strong>" + youLabel + "<\/strong> " + text + "<\/p>";
-                        input.value = "";
-                        try {
-                            var response = await fetch("https://website-f55a.onrender.com/chat", {
-                                method: "POST",
-                                headers: { "Content-Type": "application/json" },
-                                body: JSON.stringify({ message: text })
-                            });
-                            var data = await response.json();
-                            chat.innerHTML += "<p><strong>Cris:<\/strong> " + data.reply + "<\/p>";
-                        } catch(err) {
-                            chat.innerHTML += "<p><strong>Cris:<\/strong> ...<\/p>";
-                        }
-                        chat.scrollTop = chat.scrollHeight;
-                    }
-                });
-            }
+                <!-- Typewriter role rotator -->
+                <div class="role-rotator">
+                    <span class="build-prefix" data-i18n="home.iambuilding">I build</span>
+                    <span class="rotator-text" id="role-rotator-text" aria-live="polite"></span>
+                </div>
 
-            var hamburgerBtn = document.getElementById('hamburger-btn');
-            var mobileNav    = document.getElementById('mobile-nav');
-            hamburgerBtn.addEventListener('click', function() {
-                var isOpen = hamburgerBtn.classList.toggle('open');
-                mobileNav.classList.toggle('open', isOpen);
-                hamburgerBtn.setAttribute('aria-expanded', isOpen);
-                mobileNav.setAttribute('aria-hidden', !isOpen);
-                document.body.style.overflow = isOpen ? 'hidden' : '';
-            });
-            mobileNav.querySelectorAll('a').forEach(function(link) {
-                link.addEventListener('click', function() {
-                    hamburgerBtn.classList.remove('open');
-                    mobileNav.classList.remove('open');
-                    hamburgerBtn.setAttribute('aria-expanded', 'false');
-                    mobileNav.setAttribute('aria-hidden', 'true');
-                    document.body.style.overflow = '';
-                });
-            });
-        });
-    </script>
-</body>
-</html>
+                <!-- Quick-stats bar -->
+                <div class="stats-bar">
+                    <div class="stat-item">
+                        <span class="stat-val" data-i18n="home.stat1.val">2025</span>
+                        <span class="stat-label" data-i18n="home.stat1.label">Graduated</span>
+                      </div>
+                      <div class="stat-divider"></div>
+                      <div class="stat-item">
+                          <span class="stat-val" data-i18n="home.stat2.val">3+</span>
+                          <span class="stat-label" data-i18n="home.stat2.label">Projects Deployed</span>
+                      </div>
+                      <div class="stat-divider"></div>
+                      <div class="stat-item">
+                          <span class="stat-val" data-i18n="home.stat3.val">5+</span>
+                          <span class="stat-label" data-i18n="home.stat3.label">Technologies</span>
+                      </div>
+                  </div>
+
+                  <!-- Tech-stack pills -->
+                  <div class="tech-pills">
+                      <span class="tech-pill">Python</span>
+                      <span class="tech-pill">.NET / C#</span>
+                      <span class="tech-pill">Java</span>
+                      <span class="tech-pill">AI / LLMs</span>
+                      <span class="tech-pill">SQL</span>
+                      <span class="tech-pill">JavaScript</span>
+                  </div>
+
+                  <!-- Dual CTAs -->
+                  <div class="hero-ctas">
+                      <a href="contact.html" class="btn btn-primary" id="btn-hire" data-i18n="home.hire">Hire me</a>
+                      <a href="projects.html" class="btn btn-ghost" id="btn-projects" data-i18n="home.viewProjects">View Projects</a>
+                  </div>
+
+                  <!-- CrisChat AI card -->
+                  <div class="chatbot-card">
+                      <div class="chatbot-header">
+                          <span class="chatbot-dot dot-red"></span>
+                          <span class="chatbot-dot dot-yellow"></span>
+                          <span class="chatbot-dot dot-green"></span>
+                          <span class="chatbot-title">CrisChat AI</span>
+                      </div>
+                      <div id="chat-messages"></div>
+                      <input
+                          type="text"
+                          id="chat-input"
+                          data-i18n-placeholder="home.chatPlaceholder"
+                          placeholder="Ask me anything about myself"
+                          autocomplete="off"
+                      />
+                  </div>
+
+                  <!-- Certifications Embed -->
+                  <div class="certifications-row">
+                      <div class="cert-badge-wrapper">
+                          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="9088846a-c765-4e88-a1f5-699bdcf41a52" data-share-badge-host="https://www.credly.com"></div>
+                      </div>
+                      <div class="cert-badge-wrapper">
+                          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="bceccfb0-0ce1-435d-954b-544e7cf2d7a7" data-share-badge-host="https://www.credly.com"></div>
+                      </div>
+                      <div class="cert-badge-wrapper">
+                          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="80d9075c-4fb6-4a67-b49b-f4e6872e494b" data-share-badge-host="https://www.credly.com"></div>
+                      </div>
+                      <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                  </div>
+
+              </div>
+          </div>
+      </section>
+
+      <script>
+          document.addEventListener("DOMContentLoaded", function () {
+
+              /* ── Particle background ── */
+              (function () {
+                  var container = document.getElementById('home-particles');
+                  for (var j = 0; j < 38; j++) {
+                      var dot = document.createElement('div');
+                      dot.classList.add('home-particle');
+                      dot.style.left              = Math.random() * 100 + 'vw';
+                      dot.style.top               = Math.random() * 100 + 'vh';
+                      dot.style.animationDelay    = (Math.random() * 8) + 's';
+                      dot.style.animationDuration = (6 + Math.random() * 10) + 's';
+                      dot.style.width = dot.style.height = (2 + Math.random() * 3) + 'px';
+                      container.appendChild(dot);
+                  }
+              })();
+
+              /* ── Role rotator ── */
+              var roles = {
+                  en: [
+                      'AI-powered apps',
+                      'modern web experiences',
+                      'business management tools',
+                      'intelligent automation'
+                  ],
+                  es: [
+                      'apps con inteligencia artificial',
+                      'experiencias web modernas',
+                      'herramientas de gestión empresarial',
+                      'automatización inteligente'
+                  ]
+              };
+
+              var rotatorEl  = document.getElementById('role-rotator-text');
+              var roleIndex  = 0;
+              var charIndex  = 0;
+              var isDeleting = false;
+
+              function getLang() {
+                  return (window.i18n && window.i18n.currentLang) ? window.i18n.currentLang : 'en';
+              }
+
+              function typeRole() {
+                  var lang     = getLang();
+                  var list     = roles[lang] || roles.en;
+                  var fullText = list[roleIndex % list.length];
+
+                  if (!isDeleting) {
+                      charIndex++;
+                      rotatorEl.textContent = fullText.substring(0, charIndex);
+                      if (charIndex >= fullText.length) {
+                          isDeleting = true;
+                          setTimeout(typeRole, 2400);
+                          return;
+                      }
+                      setTimeout(typeRole, 72);
+                  } else {
+                      charIndex--;
+                      rotatorEl.textContent = fullText.substring(0, charIndex);
+                      if (charIndex === 0) {
+                          isDeleting = false;
+                          roleIndex++;
+                          setTimeout(typeRole, 420);
+                          return;
+                      }
+                      setTimeout(typeRole, 36);
+                  }
+              }
+              setTimeout(typeRole, 1200);
+
+              /* ── CrisChat chatbot ── */
+              var input          = document.getElementById('chat-input');
+              var chat           = document.getElementById('chat-messages');
+              var welcomeMessage = window.i18n ? window.i18n.t('home.welcome') : "Thanks for visiting my site, feel free to ask me anything!";
+              var wi = 0;
+
+              function typeWelcome() {
+                  if (wi < welcomeMessage.length) {
+                      chat.innerHTML = '<p><strong>Cris:<\/strong> ' + welcomeMessage.substring(0, wi + 1) + '<\/p>';
+                      wi++;
+                      setTimeout(typeWelcome, 28);
+                  }
+              }
+              chat.innerHTML = '<p><strong>Cris:<\/strong> <\/p>';
+              typeWelcome();
+
+              if (input) {
+                  input.addEventListener('keypress', async function (e) {
+                      if (e.key !== 'Enter') return;
+                      var text = input.value.trim();
+                      if (!text) return;
+                      var youLabel = window.i18n ? window.i18n.t('chat.you') : 'You:';
+                      chat.innerHTML += '<p><strong>' + youLabel + '<\/strong> ' + text + '<\/p>';
+                      input.value = '';
+                      try {
+                          var res  = await fetch('https://website-f55a.onrender.com/chat', {
+                              method:  'POST',
+                              headers: { 'Content-Type': 'application/json' },
+                              body:    JSON.stringify({ message: text })
+                          });
+                          var data = await res.json();
+                          chat.innerHTML += '<p><strong>Cris:<\/strong> ' + data.reply + '<\/p>';
+                      } catch (err) {
+                          chat.innerHTML += '<p><strong>Cris:<\/strong> ...<\/p>';
+                      }
+                      chat.scrollTop = chat.scrollHeight;
+                  });
+              }
+
+              /* ── Hamburger menu ── */
+              var hamburgerBtn = document.getElementById('hamburger-btn');
+              var mobileNav    = document.getElementById('mobile-nav');
+
+              hamburgerBtn.addEventListener('click', function () {
+                  var isOpen = hamburgerBtn.classList.toggle('open');
+                  mobileNav.classList.toggle('open', isOpen);
+                  hamburgerBtn.setAttribute('aria-expanded', isOpen);
+                  mobileNav.setAttribute('aria-hidden', !isOpen);
+                  document.body.style.overflow = isOpen ? 'hidden' : '';
+              });
+
+              mobileNav.querySelectorAll('a').forEach(function (link) {
+                  link.addEventListener('click', function () {
+                      hamburgerBtn.classList.remove('open');
+                      mobileNav.classList.remove('open');
+                      hamburgerBtn.setAttribute('aria-expanded', 'false');
+                      mobileNav.setAttribute('aria-hidden', 'true');
+                      document.body.style.overflow = '';
+                  });
+              });
+          });
+      </script>
+
+  </body>
+  </html>
