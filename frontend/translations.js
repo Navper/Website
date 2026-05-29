@@ -50,6 +50,10 @@ const translations = {
         'label.location': 'Location:',
         'label.institution': 'Institution:',
         'label.year': 'Year:',
+        'about.dateIndalweb': '08/2025 - 02/2026',
+        'about.dateTransnaba': '01/2024 - Present',
+        'about.dateAbogados': '03/2024 - 10/2024',
+        'about.dateMedia': '01/2022 - 11/2022',
 
         // New work experience — Indalweb
         'about.dotnetDev': '.NET ASP Developer',
@@ -107,6 +111,15 @@ const translations = {
         'p2.f4': 'Deployed on Netlify & Render',
         'p2.status': 'Live',
 
+
+        // Project 3 — Secure Retail AI Copilot
+        'p3.title': 'Secure Retail AI Copilot',
+        'p3.desc': 'A conversational AI assistant for a fictional retail store that consults a product catalog, checks stock, and recommends items using a LangChain RAG pipeline and Google Gemini API.',
+        'p3.f1': 'Streamlit chat interface',
+        'p3.f2': 'FAISS local vector database',
+        'p3.f3': 'Gemini Flash AI embeddings & generation',
+        'p3.f4': 'Strict system prompting guardrails',
+        'p3.status': 'Completed',
 
         // Project 4 — Truck Manager
         'p4.title': 'Workshop Truck Dispatch Manager',
@@ -183,6 +196,10 @@ const translations = {
         'label.location': 'Ubicación:',
         'label.institution': 'Centro:',
         'label.year': 'Año:',
+        'about.dateIndalweb': '08/2025 - 02/2026',
+        'about.dateTransnaba': '01/2024 - Presente',
+        'about.dateAbogados': '03/2024 - 10/2024',
+        'about.dateMedia': '01/2022 - 11/2022',
 
         // Nueva experiencia — Indalweb
         'about.dotnetDev': 'Desarrollador .NET ASP',
@@ -240,6 +257,15 @@ const translations = {
         'p2.f4': 'Desplegado en Netlify y Render',
         'p2.status': 'En Producción',
 
+
+        // Proyecto 3 — Secure Retail AI Copilot
+        'p3.title': 'Secure Retail AI Copilot',
+        'p3.desc': 'Un asistente conversacional con IA para una tienda minorista ficticia que consulta un catálogo de productos, verifica el inventario y recomienda artículos mediante una arquitectura RAG con LangChain y la API de Google Gemini.',
+        'p3.f1': 'Interfaz de chat en Streamlit',
+        'p3.f2': 'Base de datos vectorial local FAISS',
+        'p3.f3': 'IA Gemini Flash (Embeddings y Generación)',
+        'p3.f4': 'Guardarraíles de sistema estrictos',
+        'p3.status': 'Completado',
 
         // Proyecto 4 — Camiones
         'p4.title': 'Gestión de Salidas de Camiones',
