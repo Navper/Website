@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// 🔄 Cargar el JSON de forma automática
+
 const loadUserInfo = () => {
   const filePath = path.join(__dirname, "cristian_info.json");
   try {
@@ -22,7 +22,7 @@ const loadUserInfo = () => {
   }
 };
 
-// 🧠 Convertir JSON a texto para el contexto del modelo
+
 const buildContextFromJson = (info) => {
   let context = `Eres CrisChat, un asistente que responde a cualquier pregunta sobre Cristian Navarro Pertegal.\n`;
   context += `CrisChat es amable, profesional y claro al responder.\n\n`;
@@ -46,11 +46,11 @@ const buildContextFromJson = (info) => {
 const headers = {
   "Authorization": `Bearer ${process.env.OPENROUTER_API_KEY}`,
   "Content-Type": "application/json",
-  "HTTP-Referer": "https://tuwebportfolio.com", // <- opcional
+  "HTTP-Referer": "https://tuwebportfolio.com", 
   "X-Title": "CrisChat"
 };
 
-// 🧠 Ruta del chatbot
+
 app.post("/chat", async (req, res) => {
   const { message } = req.body;
 
@@ -80,7 +80,7 @@ app.post("/chat", async (req, res) => {
   }
 });
 
-// 🚀 Servidor
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Servidor CrisChat (OpenRouter) activo en http://localhost:${PORT}`);

@@ -229,7 +229,7 @@ body {
     transform: scale(1.1); 
 }
 
-/* SKILLS */
+
 .skills {
     margin-top:7%;
     background: rgba(255, 255, 255, 0.1); 
@@ -269,7 +269,7 @@ body {
     color: #f06; 
 }
 
-/* CONTACT*/
+
 
 .contact {
     margin-top: 7%;
@@ -373,7 +373,7 @@ body {
 }
 
 
-/* ABOUT */
+
 .about {
     margin-top: 7%;
     background: rgba(255, 255, 255, 0.1); 
@@ -742,9 +742,7 @@ body {
     line-height: 1.4;
 }
 
-/* ===========================================
-   HAMBURGER MENU — mobile nav toggle
-   =========================================== */
+
 
 .hamburger {
     display: none;
@@ -770,12 +768,12 @@ body {
     transform-origin: center;
 }
 
-/* Open state — X icon */
+
 .hamburger.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
 .hamburger.open span:nth-child(2) { opacity: 0; width: 0; }
 .hamburger.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
 
-/* Mobile nav overlay */
+
 .mobile-nav-overlay {
     display: none;
     position: fixed;
@@ -825,9 +823,7 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-/* ===========================================
-   TABLET — max-width: 992px
-   =========================================== */
+
 @media (max-width: 992px) {
     .header {
         padding: 18px 6%;
@@ -852,12 +848,10 @@ body {
     }
 }
 
-/* ===========================================
-   MOBILE — max-width: 768px
-   =========================================== */
+
 @media (max-width: 768px) {
 
-    /* --- Header & Nav --- */
+    
     .header {
         padding: 16px 5%;
         background: rgba(12, 16, 34, 0.95);
@@ -873,7 +867,7 @@ body {
         display: flex;
     }
 
-    /* --- Home section --- */
+    
     .home {
         padding: 80px 5% 40px;
         height: auto;
@@ -930,7 +924,7 @@ body {
         margin: 12px 0;
     }
 
-    /* --- About section --- */
+    
     .about {
         padding: 80px 5% 40px;
         margin-top: 0;
@@ -963,7 +957,7 @@ body {
         padding: 16px;
     }
 
-    /* --- Skills section --- */
+    
     .skills {
         padding: 80px 5% 40px;
         margin-top: 0;
@@ -984,7 +978,7 @@ body {
         font-size: 44px;
     }
 
-    /* --- Contact section --- */
+    
     .contact {
         padding: 80px 5% 40px;
         margin-top: 0;
@@ -1012,9 +1006,7 @@ body {
     }
 }
 
-/* ===========================================
-   SMALL PHONES — max-width: 480px
-   =========================================== */
+
 @media (max-width: 480px) {
     .home-content h1 {
         font-size: 22px;
@@ -1064,9 +1056,7 @@ body {
     }
 }
 
-/* ===========================================
-   LANGUAGE SWITCHER
-   =========================================== */
+
 
 .lang-switcher {
     display: flex;
@@ -1104,7 +1094,7 @@ body {
     background: rgba(255, 255, 255, 0.1);
 }
 
-/* Lang switcher inside mobile overlay */
+
 .mobile-nav-overlay .lang-switcher {
     background: rgba(255, 255, 255, 0.06);
     border-color: rgba(255, 255, 255, 0.15);
@@ -1119,15 +1109,13 @@ body {
 
 @media (max-width: 768px) {
     .header-right .lang-switcher {
-        display: none; /* shown inside mobile overlay instead */
+        display: none; 
     }
 }
 
-/* ===========================================
-   REDiseño HOME - HIGH IMPACT
-   =========================================== */
 
-/* Particle background */
+
+
 .home-particles {
     position: absolute;
     top: 0;
@@ -1163,7 +1151,7 @@ body {
     }
 }
 
-/* Two-column layout */
+
 .home-hero {
     display: grid;
     grid-template-columns: 0.8fr 1.2fr;
@@ -1192,7 +1180,7 @@ body {
     animation: slideRight 1s ease forwards;
 }
 
-/* Override old centered home container styles */
+
 .home {
     display: flex !important;
     height: 100vh;
@@ -1212,7 +1200,7 @@ body {
     text-transform: uppercase;
 }
 
-/* Rotator / Typewriter */
+
 .role-rotator {
     font-size: 24px;
     font-weight: 600;
@@ -1242,7 +1230,7 @@ body {
     50% { border-color: rgba(255, 255, 255, 0.75); }
 }
 
-/* Stats Bar */
+
 .stats-bar {
     display: flex;
     align-items: center;
@@ -1289,7 +1277,7 @@ body {
     margin: 0 15px;
 }
 
-/* Tech Pills */
+
 .tech-pills {
     display: flex;
     flex-wrap: wrap;
@@ -1316,7 +1304,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* CTAs */
+
 .hero-ctas {
     display: flex;
     gap: 15px;
@@ -1363,7 +1351,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* Chatbot Card Console Style */
+
 .chatbot-card {
     background: rgba(12, 16, 34, 0.7);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -1437,7 +1425,7 @@ body {
     box-shadow: none !important;
 }
 
-/* Certifications Embed */
+
 .certifications-row {
     display: flex;
     gap: 15px;
@@ -1478,7 +1466,7 @@ body {
     border: none !important;
 }
 
-/* Responsive styling */
+
 @media (max-width: 992px) {
     .home-hero {
         grid-template-columns: 1fr;
@@ -1550,4 +1538,4 @@ body {
     .btn-primary, .btn-ghost {
         width: 100% !important;
     }
-}
+}

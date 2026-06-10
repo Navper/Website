@@ -1,10 +1,6 @@
-/* ============================================
-   SKILLS PAGE — skills.css
-   Standalone styles for the redesigned skills page.
-   Depends on styles.css for global vars (header, fonts, body bg).
-   ============================================ */
 
-/* ── Layout ─────────────────────────────── */
+
+
 .skills-main {
     min-height: 100vh;
     padding: 110px 8% 80px;
@@ -12,7 +8,7 @@
     margin: 0 auto;
 }
 
-/* ── Hero ────────────────────────────────── */
+
 .skills-hero {
     text-align: center;
     margin-bottom: 70px;
@@ -55,7 +51,7 @@
     -webkit-text-fill-color: transparent;
 }
 
-/* ── Category block ──────────────────────── */
+
 .skill-category {
     margin-bottom: 60px;
     animation: fadeInUp 0.6s ease both;
@@ -92,14 +88,14 @@
     margin: 0;
 }
 
-/* ── Skill grid ──────────────────────────── */
+
 .skill-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 16px;
 }
 
-/* ── Skill card ──────────────────────────── */
+
 .skill-card {
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -130,7 +126,7 @@
     gap: 16px;
 }
 
-/* ── Icon wrap ───────────────────────────── */
+
 .skill-icon-wrap {
     width: 52px;
     height: 52px;
@@ -150,7 +146,7 @@
     transform: scale(1.1) rotate(-3deg);
 }
 
-/* ── Skill info & bar ────────────────────── */
+
 .skill-info {
     flex: 1;
     min-width: 0;
@@ -176,7 +172,7 @@
 }
 
 .skill-fill {
-    width: 0;                       /* starts at 0, animated to --fill */
+    width: 0;                       
     height: 100%;
     border-radius: 99px;
     background: var(--bar-color, #ff0066);
@@ -188,13 +184,13 @@
     width: var(--fill, 0%);
 }
 
-/* ── Keyframes ───────────────────────────── */
+
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(26px); }
     to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ── Responsive ──────────────────────────── */
+
 @media (max-width: 900px) {
     .skills-main {
         padding: 100px 6% 60px;
