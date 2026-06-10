@@ -80,7 +80,7 @@ const translations = {
         'projects.label': '// my work',
         'projects.titlePlain': 'Featured',
         'projects.titleGradient': 'Projects',
-        'projects.subtitle': "A collection of things I've built — ranging from AI-powered bots to business tools and games. Each project is a story of a problem solved and something new learned.",
+        'projects.subtitle': "A collection of things I've built — ranging from AI-powered bots to business tools. Each project is a story of a problem solved and something new learned.",
         'filter.all': 'All',
         'filter.ai': 'AI / ML',
 
@@ -176,7 +176,7 @@ const translations = {
 
         // Sobre mí
         'about.title': 'Sobre Mí',
-        'about.bio': "\n Hola, soy Cristian Navarro Pertegal, desarrollador de software de Orihuela, España. Tengo un título en Desarrollo de Aplicaciones Multiplataforma y experiencia desarrollando apps de gestión y soluciones empresariales.\n\nSiempre me ha apasionado la tecnología y el diseño gráfico. Con el tiempo me adentré más en la informática, empezando con scripts básicos y tutoriales de YouTube, hasta que me di cuenta de que lo que realmente quería era estudiar programación. Cambié mi enfoque del diseño gráfico al desarrollo de aplicaciones, del que me acabo de titular. Hoy, mi amor por la programación y las ganas de aprender nuevas tecnologías son más fuertes que nunca. Estoy motivado para seguir creciendo profesionalmente y contribuir al desarrollo de aplicaciones que no solo resuelvan problemas, sino que también ofrezcan experiencias de usuario únicas.\n\nMi objetivo es seguir perfeccionando mis habilidades y colaborar en proyectos innovadores donde pueda aplicar todo lo aprendido y mejorar cada día. Adicionalmente, hablo Español de forma nativa y poseo un nivel C1 de Inglés.",
+        'about.bio': "\n Hola, soy Cristian Navarro Pertegal, desarrollador de software de Orihuela, España. Tengo un título en Desarrollo de Aplicaciones Multiplataforma y experiencia desarrollando apps de gestión y soluciones empresariales.\n\nSiempre me ha apasionado la tecnología y el diseño gráfico. Con el tiempo me adentré más en la informática, empezando con scripts básicos y tutoriales de YouTube, hasta que me di cuenta de que lo que realmente quería era estudiar programación. Cambié mi enfoque del diseño gráfico al desarrollo de aplicaciones, del que me acabo de titular. Hoy, mi amor por la programación y las ganas de aprender nuevas tecnologías son más fuertes que nunca. Estoy motivado para seguir creciendo profesionalmente y contribuir al desarrollo de aplicaciones que no solo resuelvan problemas, sino que también ofrezcan experiencias de usuario únicas.\n\nEn esta búsqueda constante de nuevas tecnologías, decidí especializarme en Inteligencia Artificial cursando un Máster en la materia. Cuento con experiencia práctica integrando soluciones con proveedores como OpenAI y Gemini, y he respaldado mis conocimientos obteniendo certificaciones oficiales que avalan mi perfil técnico.\n\nMi objetivo es seguir perfeccionando mis habilidades y colaborar en proyectos innovadores donde pueda aplicar todo lo aprendido y mejorar cada día. Adicionalmente, hablo español de forma nativa y poseo un nivel C1 de inglés.",
         'about.workExp': 'Experiencia Laboral',
         'about.odooDev': 'Desarrollador Odoo',
         'about.odooDesc': 'Como parte de un equipo, fui responsable de diseñar y desarrollar una aplicación de gestión, incluyendo la creación de la base de datos, el desarrollo de módulos Odoo y reuniones con clientes.',
@@ -226,7 +226,7 @@ const translations = {
         'projects.label': '// mi trabajo',
         'projects.titlePlain': 'Proyectos',
         'projects.titleGradient': 'Destacados',
-        'projects.subtitle': "Una colección de lo que he construido — desde bots con IA hasta herramientas de negocio y videojuegos. Cada proyecto es la historia de un problema resuelto y algo nuevo aprendido.",
+        'projects.subtitle': "Una colección de lo que he construido — desde bots con IA hasta herramientas de negocio. Cada proyecto es la historia de un problema resuelto y algo nuevo aprendido.",
         'filter.all': 'Todos',
         'filter.ai': 'IA / ML',
 
